@@ -1,0 +1,27 @@
+/*------------------------------------------------------------------
+  Swup
+-------------------------------------------------------------------*/
+
+.transition-fade {
+  /* default animation rules */
+  opacity: 1;
+  transition: 500ms;
+}
+
+html.is-animating .transition-fade {
+  /* CSS styles when animating  */
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+html.is-changing .transition-fade {
+  /* CSS styles when changing  */
+}
+
+html.is-leaving .transition-fade {
+  /* CSS styles when leaving  */
+}
+
+html.is-rendering .transition-fade {
+  /* CSS styles when rendering  */
+}
