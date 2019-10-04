@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>SWUP</title>
-	<link href="style.css" rel="stylesheet">	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SWUP</title>
+  <link href="style.css" rel="stylesheet">	
 </head>
 <body>
+  <!-- Закрытие Offcanvas через меню -->
+  <div class="uk-margin">
+    <ul class="uk-nav">
+      <li><a onclick="UIkit.offcanvas('#offcanvas-usage').toggle();" href="/">Главная</a></li>
+      <li><a onclick="UIkit.offcanvas('#offcanvas-usage').toggle();" href="/page-one">Страница 1</a></li>
+      <li><a onclick="UIkit.offcanvas('#offcanvas-usage').toggle();" href="/page-one/page-two">Страница 2</a></li>
+    </ul>
+  </div>
 
-	<main id="swup" class="transition-fade">
-		{% block main %}{% endblock %}
-	</main>
-  
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<script src="swup.min.js"></script>
-	<script src="swup.init.js"></script>
+  <main id="swup" class="transition-fade">
+    {% block main %}{% endblock %}
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="swup.min.js"></script>
+  <script src="swup.init.js"></script>
 </body>
